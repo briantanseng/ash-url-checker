@@ -1,0 +1,1 @@
+* * * * * /app/check-url.sh >> /var/log/check-url.log
