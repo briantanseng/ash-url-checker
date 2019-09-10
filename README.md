@@ -10,7 +10,7 @@ docker build -t briantanseng/ash-url-checker .
 
 ### Run a container
 
-Create an output directory:
+Create an output directory on your host machine:
 ```
 mkdir -p ~/your-output-directory
 ```
@@ -28,7 +28,7 @@ docker run --name ash-url-checker \
 -d briantanseng/ash-url-checker
 ```
 
-A CSV file will be created and updated with the status of your URLs.
+A CSV file will be created and updated in your output directory. This file will contain the status info of your URLs after cron's invocation.
 
 ### Cleanup
 ```
