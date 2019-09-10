@@ -10,18 +10,25 @@ docker build -t briantanseng/ash-url-checker .
 
 ### Run a container
 
+Create an output directory:
+```
+mkdir -p ~/your-output-directory
+```
+
 Run using interactive mode:
 ```
 docker run --name ash-url-checker \
--v ~/srv/ash-url-checker/output:/app/output \
+-v ~/your-output-directory:/app/output \
 -it briantanseng/ash-url-checker
 ```
 Run as a background process:
 ```
 docker run --name ash-url-checker \
--v ~/srv/ash-url-checker/output:/app/output \
+-v ~/your-output-directory:/app/output \
 -d briantanseng/ash-url-checker
 ```
+
+A CSV file will be created and updated with the status of your URLs.
 
 ### Cleanup
 ```
